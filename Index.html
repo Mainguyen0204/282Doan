@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container nav-top">
+		<div class="row">
+			<div class="col-lg-3 search-form ">
+				<div class="row">
+					<div class="col-10">
+						<input type="text" placeholder="search">
+					</div>
+					<div class="col-2">
+						<button class="btn-search"><i class="fa-solid fa-search"></i></button>
+					</div>
+				</div>								
+			</div>
+			<div class="col-lg-6 logo col-6">
+				<img src="images/logo.png" alt="">
+			</div>
+			<div class="col-lg-3 icon-list col-6">
+				<ul class="d-flex justify-content-end">
+					<li>
+						<i class="fa-solid fa-search" id="isearch"></i>
+						<div class="popup search">
+							<div class="row">
+								<div class="col-10">
+									<input type="text" placeholder="search">
+								</div>
+								<div class="col-2">
+									<button class="btn-search"><i class="fa-solid fa-search"></i></button>
+								</div>
+							</div>	
+						</div>
+					</li>
+					<li><i class="fa-regular fa-heart"></i></li>
+					<li>
+						<i class="fa-regular fa-user" id="iuser"></i>
+						<div class="form-login popup">
+							<h4>Login</h4>
+							<input type="text" placeholder="User Name">
+							<input type="password" placeholder="Password">
+							<button>Login</button>
+						</div>
+					</li>
+					<li>
+						<i class="fa-solid fa-bag-shopping" id="icart"></i>
+						<div class="shopping-bag popup">
+							<h4>Shopping cart</h4>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.6.3.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		$('#iuser').click(function(){
+			var show=$('.form-login').css('display');
+			if(show=='none')
+				$('.form-login').css('display','block');
+			if(show=='block')
+				$('.form-login').css('display','none');
+		})
+		$('#icart').click(function(){
+			var show=$('.shopping-bag').css('display');
+			if(show=='none')
+				$('.shopping-bag').css('display','block')
+			if(show=='block')
+				$('.shopping-bag').css('display','none');
+		})
+		$('#isearch').click(function(){
+			var show=$('.search').css('display');
+			if(show=='none')
+				$('.search').css('display','block')
+			if(show=='block')
+				$('.search').css('display','none');
+		})
+	</script>
+</body>
+</html>
